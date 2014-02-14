@@ -7,16 +7,13 @@
   <link rel="stylesheet" href="css/app.css"/>
 </head>
 <body>
-  <div id="toolbar"></div>
+  <div id="toolbar">
+      <div id="toolbarHolder">
+      <div ng-include src="'partials/search.html'"></div>
+      </div>
+  </div>
   <div id="header">
-      <ul class="menu">
-        <li><a href="#/">Home</a></li>
-        <li><a href="#/aboutus">About Us</a></li>
-        <li><a href="#/products">Products</a></li>
-        <li><a href="#/brochure">Brochure Request</a></li>
-        <li><a href="#/downloads">Downloads</a></li>
-        <li><a href="#/stockist">Find a stockist</a></li>
-      </ul>
+      <div ng-include src="'partials/menu.html'"></div>
   </div>
 
   <div ng-view class="appview"></div>
