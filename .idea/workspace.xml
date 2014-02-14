@@ -23,19 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="29" selection-start="590" selection-end="597" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="585">
+            <state line="34" column="0" selection-start="1112" selection-end="1112" vertical-scroll-proportion="0.84577113" vertical-offset="0" max-vertical-offset="603">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="app.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="1" selection-start="532" selection-end="532" vertical-scroll-proportion="0.784689" vertical-offset="108" max-vertical-offset="780">
+            <state line="25" column="1" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="1065">
               <folding />
             </state>
           </provider>
@@ -435,13 +435,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/partials/downloads.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="12" selection-start="32" selection-end="32" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="135">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/partials/brochurerequest.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="21" selection-start="41" selection-end="41" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="135">
@@ -463,13 +456,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="29" selection-start="590" selection-end="597" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="585">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="25" selection-start="595" selection-end="595" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
@@ -477,9 +463,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/partials/downloads.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="12" selection-start="32" selection-end="32" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="135">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="1" selection-start="532" selection-end="532" vertical-scroll-proportion="0.784689" vertical-offset="108" max-vertical-offset="780">
+        <state line="25" column="1" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="1065">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="0" selection-start="1112" selection-end="1112" vertical-scroll-proportion="0.84577113" vertical-offset="0" max-vertical-offset="603">
           <folding />
         </state>
       </provider>
