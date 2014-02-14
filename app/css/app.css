@@ -1,34 +1,92 @@
 /* app css stylesheet */
-
-.menu {
+#menu{
+    padding: 0;
+}
+#menu li{
   list-style: none;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
-  float: right;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top:10px;
+  padding-bottom:10px;
+  list-style: none;
+  position: relative;
+  display: inline-table;
+
+}
+#menu li.active{
+    background: #cccccc;
+    color: #000000;
+}
+#menu li:hover{
+    background: #cccccc;
+    color: #000000;
 }
 
-.menu:before {
-  content: "[";
+#menu li.active a{
+    color: #000000;
+}
+#menu li:hover a{
+    color: #000000;
 }
 
-.menu:after {
-  content: "]";
-    clear: both;
+
+/*#menu:before {*/
+  /*content: "[";*/
+/*}*/
+
+/*#menu:after {*/
+  /*content: "]";*/
+    /*clear: both;*/
+/*}*/
+
+/*#menu > li {*/
+  /*display: inline;*/
+/*}*/
+
+/*#menu > li:before {*/
+  /*content: "|";*/
+  /*padding-right: 0.3em;*/
+/*}*/
+
+/*#menu > li:nth-child(1):before {*/
+  /*content: "";*/
+  /*padding: 0;*/
+/*}*/
+
+#menu ul{
+    padding: 0;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 150px;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    display: none;
 }
 
-.menu > li {
-  display: inline;
+
+#menu a{
+    text-decoration: none;
+    color: #999999;
 }
 
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
+#menu a:hover{
+
 }
 
-.menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
+#menu ul li{
+
 }
+
+#menu li:hover > ul {
+    height: 50;
+    display: block;
+    background: #ccc;
+}
+
+
 
 div#toolbar{
     width:100%;

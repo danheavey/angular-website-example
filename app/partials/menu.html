@@ -1,7 +1,12 @@
-<ul class="menu">
-    <li><a href="#/">Home</a></li>
-    <li><a href="#/aboutus">About Us</a></li>
-    <li><a href="#/products">Products</a></li>
+<ul id="menu" ng-controller="HeaderController">
+    <li ng-class="{ active: isActive('/')}"><a href="#/">Home</a></li>
+    <li ng-class="{ active: isActive('/aboutus')}"><a href="#/aboutus">About Us</a></li>
+    <li><a href="#/products">Products</a>
+        <ul>
+            <li>Boilers</li>
+            <li>Water Heaters</li>
+        </ul>
+    </li>
     <li><a href="#/brochure">Brochure Request</a></li>
     <li><a href="#/downloads">Downloads</a></li>
     <li><a href="#/stockist">Find a stockist</a></li>
