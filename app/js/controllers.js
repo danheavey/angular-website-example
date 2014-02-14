@@ -1,11 +1,33 @@
 'use strict';
 
 /* Controllers */
+angular.module('myApp.controllers', [])
 
-angular.module('myApp.controllers', []).
-  controller('MyCtrl1', [function() {
 
-  }])
-  .controller('MyCtrl2', [function() {
+    .controller('HomeCtrl', ['$scope',
+    function($scope) {
+        $scope.title = "Home"
+    }])
+    .controller('AboutUsCtrl', ['$scope',
+    function($scope) {
+        $scope.title = "About Us"
+    }])
+    .controller('ProductsCtrl', ['$scope',
+        function($scope) {
+            $scope.title = "Products"
+     }])
+    .controller('BrochureRequestCtrl', ['$scope',
+        function($scope) {
+            $scope.title = "Brochure Request"
+     }])
+    .controller('DownloadsCtrl', ['$scope',
+        function($scope) {
+            $scope.title = "Downloads"
+     }])
+    .controller('StockistCtrl', ['$scope',
+        function($scope) {
+            $scope.title = "Stockist"
+     }]);
 
-  }]);
+
+
