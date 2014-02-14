@@ -1,29 +1,32 @@
 <!doctype html>
-<html lang="en" ng-app="myApp">
+<html lang="en" data-ng-app="myApp">
 <head>
   <meta charset="utf-8">
-  <title>My AngularJS App</title>
+  <title>Generic Company</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/app.css"/>
 </head>
 <body>
   <div id="toolbar">
       <div id="toolbarHolder">
-      <div ng-include src="'partials/search.html'"></div>
+
+      <img src="img/images.gif" id="logo" alt="logo"/>
+      <div data-ng-include src="'partials/search.html'"></div>
       </div>
   </div>
   <div id="header">
-      <div ng-include src="'partials/menu.html'"></div>
+      <div data-ng-include src="'partials/menu.html'"></div>
   </div>
 
-  <div ng-view class="appview"></div>
+  <div data-ng-view class="appview"></div>
 
-  <div ng-include src="'partials/footer.html'"></div>
+  <div data-ng-include src="'partials/footer.html'"></div>
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular/angular-route.js"></script>
+  <script src="lib/angular/angular-animate.js"></script>
   <script src="js/app.js"></script>
   <script src="js/services.js"></script>
   <script src="js/controllers.js"></script>

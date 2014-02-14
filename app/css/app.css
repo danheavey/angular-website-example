@@ -1,8 +1,11 @@
 /* app css stylesheet */
-#menu{
+p, h1, body{
+    color: #666;
+}
+ul#menu{
     padding: 0;
     margin: 0;
-    display: inline;
+
 }
 #menu li{
   padding-left: 20px;
@@ -13,6 +16,8 @@
   position: relative;
   display: inline-table;
   margin: 0 ;
+  list-style: none;
+  float: left;
 
 }
 #menu li.active{
@@ -34,7 +39,7 @@
 #menu ul{
     padding: 0;
     position: absolute;
-    /*top: 48px;*/
+    top: 37px;
     left: 0;
     width: 150px;
     display: none;
@@ -49,7 +54,6 @@
 
 
 #menu li:hover > ul {
-    height: 50;
     display: block;
     background: #eeeeee;
 }
@@ -58,22 +62,27 @@
 
 div#toolbar{
     width:100%;
-    height:50px;
+    height:55px;
     left:0px;
     top: 0px;
     background-color: #eeeeee;
 }
-
+#logo{
+    margin: 5px;
+    float: left;
+}
 form#seachbar{
-    padding-top:10px;
+    padding-top:15px;
     float: right;
 }
 
 div#header{
     max-width:980px;
-    height:60px;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 div#header:after{
@@ -96,4 +105,8 @@ div#footer{
     max-width: 980px;
     margin-left: auto;
     margin-right: auto;
+}
+div#footer a{
+    color: #666;
+
 }
