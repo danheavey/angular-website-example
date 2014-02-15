@@ -41,6 +41,10 @@ angular.module('myApp.controllers', [])
         $scope.headerImage = "img/default-page.jpg";
      }])
 
+    .controller('searchCtrl', ['$scope',
+        function($scope) {
+     }])
+
     .controller('MenuController',['$scope','$location',
     function ($scope, $location)
     {

@@ -1,5 +1,5 @@
 /* app css stylesheet */
-p, h1, body{
+p, h1, body, a{
     color: #666;
 }
 ul#menu{
@@ -17,7 +17,6 @@ ul#menu{
   display: inline-table;
   margin: 0 ;
   list-style: none;
-  overflow: hidden;
 }
 #menu li.active{
     background: #eeeeee;

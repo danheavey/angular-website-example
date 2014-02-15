@@ -1,4 +1,4 @@
-<form id="seachbar">
-    <input type="search" value="search" />
-    <input type="button" value="Go">
+<form id="seachbar" name="search" ng-controller="searchCtrl">
+    <input type="search" name="search" value="" ng-model="search" novalidate required />
+    <input type="button" name="go" value="Go" disabled="{{search.$valid}}">
 </form>
