@@ -5,7 +5,7 @@ p, h1, body{
 ul#menu{
     padding: 0;
     margin: 0;
-
+    display: inline-table;
 }
 #menu li{
   padding-left: 20px;
@@ -17,7 +17,9 @@ ul#menu{
   display: inline-table;
   margin: 0 ;
   list-style: none;
-  float: left;
+  overflow: hidden;
+
+    /*float: left;*/
 
 }
 #menu li.active{
@@ -77,6 +79,7 @@ form#seachbar{
 }
 
 div#header{
+    clear:both;
     max-width:980px;
     height: auto;
     margin-left: auto;
@@ -86,7 +89,7 @@ div#header{
 }
 
 div#header:after{
-   /* clear: both; */
+   clear: both;
 }
 
 #toolbarHolder{
@@ -95,11 +98,68 @@ div#header:after{
     margin-right: auto;
 }
 
-.appview{
+.view-animate-container {
+
     max-width: 980px;
     margin-left: auto;
     margin-right: auto;
 }
+.view-animate{
+    z-index:-1;
+    /*position:relative;*/
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+}
+.view-animate.ng-enter {
+    transition-delay: 2s;
+    -webkit-transition:1s linear all;
+    -moz-transition:1s linear all;
+    -o-transition:1s linear all;
+    transition: 1s linear all;
+    opacity: 0;
+
+}
+
+
+.view-animate.ng-leave {
+
+    -webkit-transition:1s linear all;
+    -moz-transition:1s linear all;
+    -o-transition:1s linear all;
+    transition: 1s linear all;
+    opacity: 0;
+
+}
+div.content{
+    position:relative;
+}
+
+.view-animate.ng-enter {
+
+    opacity: 0;
+    /*left:100%;*/
+}
+.view-animate.ng-enter.ng-enter-active {
+    opacity: 0.5;
+    /*left:0;*/
+}
+.view-animate.ng-leave.ng-leave-active {
+    opacity: 0;
+    /*left:-100%;*/
+}
+/*.animate-enter {*/
+    /*-webkit-transition:1s linear all;*/
+    /*-moz-transition:1s linear all;*/
+    /*-o-transition:1s linear all;*/
+    /*transition: 1s linear all;*/
+    /*opacity: 0;*/
+/*}*/
+
+/*.animate-enter.animate-enter-active {*/
+    /*opacity: 1;*/
+/*}*/
 
 div#footer{
     max-width: 980px;
