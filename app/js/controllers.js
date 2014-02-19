@@ -1,7 +1,7 @@
 'use strict';
 
 /* Controllers */
-angular.module('myApp.controllers', [])
+angular.module('myApp.controllers', ['ui.bootstrap', 'ngAnimate', 'ui.bootstrap.setNgAnimate'])
 
 
     .controller('HomeCtrl', ['$scope',
@@ -40,6 +40,23 @@ angular.module('myApp.controllers', [])
         $scope.title = "Stockist";
         $scope.headerImage = "img/default-page.jpg";
      }])
+    .controller('CarouselDemoCtrl',['$scope', '$animate', function ($scope, $animate) {
+        $scope.animate = false;
+        $scope.animateGlobal = true;
+
+        $scope.$watch('animateGlobal', function(val){
+            console.log('Set Global animation Enabled: ' + val);
+            $animate.enabled(val);
+        });
+        //TODO hook up to service
+        $scope.slides = [
+            { image: 'img/products/large/Astwood_sml_RGB_72dpi.jpg', text: 'Astwood' },
+            { image: 'img/products/large/Bodrum_sml_RGB_72dpi.jpg', text: 'Borrum' },
+            { image: 'img/products/large/Elstow_sml_RGB_72dpi.jpg', text: 'Bozeat' }
+
+        ];
+
+    }])
 
     .controller('searchCtrl', ['$scope',
         function($scope) {

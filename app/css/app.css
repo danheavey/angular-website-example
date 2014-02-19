@@ -152,3 +152,6 @@ div#footer a{
     color: #666;
 
 }
+
+/* bootstrap-ui styles */
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
