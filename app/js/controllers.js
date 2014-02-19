@@ -48,11 +48,12 @@ angular.module('myApp.controllers', ['ui.bootstrap', 'ngAnimate', 'ui.bootstrap.
             console.log('Set Global animation Enabled: ' + val);
             $animate.enabled(val);
         });
-
+        //TODO hook up to service
         $scope.slides = [
-            { image: 'http://lorempixel.com/400/200/', text: 'blah' },
-            { image: 'http://lorempixel.com/400/200/', text: 'blah' },
-            { image: 'http://lorempixel.com/400/200/', text: 'blah' },
+            { image: 'img/products/large/Astwood_sml_RGB_72dpi.jpg', text: 'Astwood' },
+            { image: 'img/products/large/Bodrum_sml_RGB_72dpi.jpg', text: 'Borrum' },
+            { image: 'img/products/large/Elstow_sml_RGB_72dpi.jpg', text: 'Bozeat' }
+
         ];
 
     }])
@@ -68,31 +69,3 @@ angular.module('myApp.controllers', ['ui.bootstrap', 'ngAnimate', 'ui.bootstrap.
             return viewLocation === $location.path();
         };
     }]);
-
-
-function TestCtrl($scope)
-{
-
-}
-
-function AccordionDemoCtrl($scope) {
-    $scope.oneAtATime = true;
-
-    $scope.groups = [
-        {
-            title: "Dynamic Group Header - 1",
-            content: "Dynamic Group Body - 1"
-        },
-        {
-            title: "Dynamic Group Header - 2",
-            content: "Dynamic Group Body - 2"
-        }
-    ];
-
-    $scope.items = ['Item 1', 'Item 2', 'Item 3'];
-
-    $scope.addItem = function() {
-        var newItemNo = $scope.items.length + 1;
-        $scope.items.push('Item ' + newItemNo);
-    };
-}

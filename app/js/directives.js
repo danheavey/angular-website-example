@@ -2,14 +2,15 @@
 
 /* Directives */
 
-
 angular.module('myApp.directives', []).
   directive('appVersion', ['version', function(version) {
     return function(scope, elm, attrs) {
       elm.text(version);
     };
   }]);
-// fix for ng-animate breaking
+
+// fix for ng-animate breaking carousel
+
 angular.module('ui.bootstrap.setNgAnimate', ['ngAnimate'])
     .directive('setNgAnimate', ['$animate', function ($animate) {
         return {
