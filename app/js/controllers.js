@@ -1,7 +1,7 @@
 'use strict';
 
 /* Controllers */
-angular.module('myApp.controllers', ['ui.bootstrap'])
+angular.module('myApp.controllers', ['ui.bootstrap', 'ngAnimate', 'ui.bootstrap.setNgAnimate'])
 
 
     .controller('HomeCtrl', ['$scope',
@@ -40,21 +40,22 @@ angular.module('myApp.controllers', ['ui.bootstrap'])
         $scope.title = "Stockist";
         $scope.headerImage = "img/default-page.jpg";
      }])
-    .controller('CarouselDemoCtrl', ['$scope',
-        function($scope) {
-            $scope.myInterval = 5000;
-            var slides = $scope.slides = [];
-            $scope.addSlide = function() {
-                var newWidth = 600 + slides.length;
-                slides.push({
-                    image: 'http://placekitten.com/' + newWidth + '/300',
-                    text: ['More','Extra','Lots of','Surplus'][slides.length % 4] + ' ' +
-                        ['Cats', 'Kittys', 'Felines', 'Cutes'][slides.length % 4]
-                });
-            };
-            for (var i=0; i<4; i++) {
-                $scope.addSlide();
-            }}])
+    .controller('CarouselDemoCtrl',['$scope', '$animate', function ($scope, $animate) {
+        $scope.animate = false;
+        $scope.animateGlobal = true;
+
+        $scope.$watch('animateGlobal', function(val){
+            console.log('Set Global animation Enabled: ' + val);
+            $animate.enabled(val);
+        });
+
+        $scope.slides = [
+            { image: 'http://lorempixel.com/400/200/', text: 'blah' },
+            { image: 'http://lorempixel.com/400/200/', text: 'blah' },
+            { image: 'http://lorempixel.com/400/200/', text: 'blah' },
+        ];
+
+    }])
 
     .controller('searchCtrl', ['$scope',
         function($scope) {
@@ -72,4 +73,26 @@ angular.module('myApp.controllers', ['ui.bootstrap'])
 function TestCtrl($scope)
 {
 
+}
+
+function AccordionDemoCtrl($scope) {
+    $scope.oneAtATime = true;
+
+    $scope.groups = [
+        {
+            title: "Dynamic Group Header - 1",
+            content: "Dynamic Group Body - 1"
+        },
+        {
+            title: "Dynamic Group Header - 2",
+            content: "Dynamic Group Body - 2"
+        }
+    ];
+
+    $scope.items = ['Item 1', 'Item 2', 'Item 3'];
+
+    $scope.addItem = function() {
+        var newItemNo = $scope.items.length + 1;
+        $scope.items.push('Item ' + newItemNo);
+    };
 }

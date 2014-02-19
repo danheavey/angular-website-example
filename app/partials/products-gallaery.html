@@ -1,22 +1,29 @@
-<div ng-controller="CarouselDemoCtrl">
-    <div style="height: 305px">
-        <carousel interval="myInterval">
-            <slide ng-repeat="slide in slides" active="slide.active">
-                <img ng-src="{{slide.image}}" style="margin:auto;">
-                <div class="carousel-caption">
-                    <h4>Slide {{$index}}</h4>
-                    <p>{{CarouselDemoCtrl.slide.text}}</p>
-                </div>
-            </slide>
-        </carousel>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <a class="btn btn-info" ng-click="addSlide()">Add Slide</a>
-        </div>
-        <div class="col-md-6">
-            Interval, in milliseconds: <input type="number" class="form-control" ng-model="myInterval">
-            <br />Enter a negative number to stop the interval.
-        </div>
-    </div>
+<div id="content" ng-controller="CarouselDemoCtrl">
+
+    <carousel interval="myInterval">
+        <slide ng-repeat="slide in slides" active="slide.active">
+            <img ng-src="{{slide.image}}?{{$index}}" style="margin:auto;" />
+            <div class="carousel-caption">
+                <h4>Slide {{$index}}</h4>
+                <p>{{slide.text}}</p>
+            </div>
+        </slide>
+    </carousel>
+
+    <p>
+        Animate Directive Enabled:  <input type="checkbox" ng-model="animate" /> {{animate}}<br>
+        Animate Global Enabled: <input type="checkbox" ng-model="animateGlobal" /> {{animateGlobal}}
+    </p>
+
 </div>
+
+<script id="template/carousel/carousel.html" type="text/ng-template">
+    <div ng-mouseenter="pause()" ng-mouseleave="play()" class="carousel">
+        <ol class="carousel-indicators" ng-show="slides().length > 1">
+            <li ng-repeat="slide in slides()" ng-class="{active: isActive(slide)}" ng-click="select(slide)"></li>
+        </ol>
+        <div class="carousel-inner" ng-transclude set-ng-animate="$parent.animate"></div>
+        <a ng-click="prev()" class="carousel-control left" ng-show="slides().length > 1">&lsaquo;</a>
+        <a ng-click="next()" class="carousel-control right" ng-show="slides().length > 1">&rsaquo;</a>
+    </div>
+</script>
