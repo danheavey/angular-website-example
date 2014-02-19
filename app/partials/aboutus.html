@@ -11,4 +11,22 @@
     But we also understand that creating a great product is only half the story and take pride in providing unflagging aftersales support.  Our reassuring, "can-do" attitude ensures that no-one is more committed to lasting customer satisfaction.
 </p>
 
+<div ng-controller="AccordionDemoCtrl">
+    <accordion close-others="oneAtATime">
+        <accordion-group heading="Accreditation" is-open="true">
+
+            <p>All our products are fitted with specially selected components and have CE and WRAS certification. We are a member of Benchmark, the industry code of practice for the installation and commissioning of domestic hot water central heating systems.  We obtain British Gas Service listings at the earliest opportunity, ensuring the highest levels of quality, reliability and service.</p>
+        </accordion-group>
+        <accordion-group heading="Background">
+            <p>We are the division of Generic Ltd, itself a subsidiary of GenCorp of the top 200 companies in the world.  Our head office and main distribution centre is based in Bradford and runs alongside a parallel operation in Germany and a sales office in France.</p>
+
+        </accordion-group>
+        <accordion-group heading="The Environment">
+            <p>Our continuing commitment means that over 80% of our boiler packaging materials can be recycled.</p>
+        </accordion-group>
+    </accordion>
+</div>
+
+
+
 <div data-ng-include src="'partials/footer.html'"></div>
