@@ -156,7 +156,21 @@ div#footer a{
 /* bootstrap-ui styles */
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 
-.carousel-control{
-    top:105px;
+.carousel-control
+{
+    line-height:245px;
+}
+
+.gallery-content
+{
+    width: 980px;
+    text-align: center;
+    margin: auto;
+}
+
+.center {
+    width: 300px;
+    text-align: center;
+    margin:auto;
 
 }
