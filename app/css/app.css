@@ -155,3 +155,8 @@ div#footer a{
 
 /* bootstrap-ui styles */
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+.carousel-control{
+    top:105px;
+
+}

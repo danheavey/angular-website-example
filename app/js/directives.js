@@ -10,7 +10,7 @@
             };
         }]);
 
-// fix for ng-animate breaking carousel
+    // fix for ng-animate breaking carousel
     angular.module('ui.bootstrap.setNgAnimate', ['ngAnimate'])
         .directive('setNgAnimate', ['$animate', function ($animate) {
             return {
